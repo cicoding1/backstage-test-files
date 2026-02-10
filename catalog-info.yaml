@@ -18,7 +18,8 @@ metadata:
 spec:
     type: service
     lifecycle: production
-    owner: apiVersion: backstage.io/v1alpha1
+    owner: guests
+    apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
     name: a-python-library
