@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-    name: kuber-plugin
-    description: A Python Library
+    name: pod-logs
+    description: inspect pod logs of backstage and cockpit
     annotations:
         backstage.io/techdocs-ref: dir:.
         backstage.io/kubernetes-label-selector: 'app.kubernetes.io/instance=backstage'         
