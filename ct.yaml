@@ -1,0 +1,37 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: backstage-resources
+  description: Backstage pod logs
+  annotations:
+    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/instance=backstage'
+spec:
+  type: kubernetes-view
+  lifecycle: production
+  owner: guests
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cockpit-resources
+  description: Cockpit pod logs
+  annotations:
+    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/instance=nextgen-cockpit-api'
+spec:
+  type: kubernetes-view
+  lifecycle: production
+  owner: guests
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: all-resources
+  description: All Helm-managed pod logs
+  annotations:
+    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/managed-by=Helm'
+spec:
+  type: kubernetes-view
+  lifecycle: production
+  owner: guests
